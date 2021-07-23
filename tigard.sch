@@ -329,20 +329,6 @@ F 6 "conn-th-01in-4-2-hdr" H 9650 2200 50  0001 C CNN "Key"
 	1    9650 2200
 	1    0    0    -1  
 $EndComp
-$Comp
-L Connector_Generic:Conn_02x05_Odd_Even J5
-U 1 1 5EBE7F5A
-P 11150 2300
-F 0 "J5" H 11200 2717 50  0000 C CNN
-F 1 "CORTEX" H 11200 2626 50  0000 C CNN
-F 2 "tigard:PinHeader_2x05_P1.27mm_Vertical_SMD" H 11150 2300 50  0001 C CNN
-F 3 "~" H 11150 2300 50  0001 C CNN
-F 4 "FTSH-105-01-F-DV-K" H 11150 2300 50  0001 C CNN "P/N"
-F 5 "C448647" H 11150 2300 50  0001 C CNN "LCSC"
-F 6 "conn-th-01in-5-2-hdr" H 11150 2300 50  0001 C CNN "Key"
-	1    11150 2300
-	1    0    0    -1  
-$EndComp
 Text Label 9250 2100 0    50   ~ 0
 CS
 Text Label 9250 2200 0    50   ~ 0
@@ -376,34 +362,6 @@ Text Label 10300 2300 2    50   ~ 0
 CLK
 Text Label 10300 2400 2    50   ~ 0
 COPI
-NoConn ~ 10950 2400
-Text Label 11950 2500 2    50   ~ 0
-~SRST
-$Comp
-L power:GND #PWR0120
-U 1 1 5EC75932
-P 10800 2550
-F 0 "#PWR0120" H 10800 2300 50  0001 C CNN
-F 1 "GND" H 10805 2377 50  0000 C CNN
-F 2 "" H 10800 2550 50  0001 C CNN
-F 3 "" H 10800 2550 50  0001 C CNN
-	1    10800 2550
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	10800 2200 10950 2200
-Wire Wire Line
-	10950 2300 10800 2300
-Connection ~ 10800 2300
-Wire Wire Line
-	10800 2300 10800 2200
-Wire Wire Line
-	10800 2300 10800 2500
-Wire Wire Line
-	10800 2500 10950 2500
-Connection ~ 10800 2500
-Wire Wire Line
-	10800 2500 10800 2550
 Text Notes 11050 4550 0    100  Italic 20
 CONNECTORS
 Wire Wire Line
@@ -2049,8 +2007,6 @@ Text Label 2450 1800 2    50   ~ 0
 USB_DP
 Text Label 2450 1600 2    50   ~ 0
 USB_DN
-Text Label 11950 2200 2    50   ~ 0
-TCK
 $Comp
 L Device:R_Pack04 RN4
 U 1 1 5ED37960
@@ -2525,23 +2481,6 @@ Wire Notes Line
 	550  9050 8800 9050
 Wire Notes Line
 	8800 3050 550  3050
-$Comp
-L Connector_Generic:Conn_02x07_Odd_Even J6
-U 1 1 5FD77DA4
-P 9750 3350
-F 0 "J6" H 9800 3867 50  0000 C CNN
-F 1 "LA" H 9800 3776 50  0000 C CNN
-F 2 "tigard:PinHeader_2x07_P1.27mm_Vertical_SMD" H 9750 3350 50  0001 C CNN
-F 3 "~" H 9750 3350 50  0001 C CNN
-F 4 "FTSH-107-01-F-DV-K" H 9750 3350 50  0001 C CNN "P/N"
-F 5 "" H 9750 3350 50  0001 C CNN "LCSC"
-	1    9750 3350
-	1    0    0    -1  
-$EndComp
-NoConn ~ 9550 3550
-NoConn ~ 9550 3650
-NoConn ~ 10050 3650
-NoConn ~ 10050 3550
 Wire Wire Line
 	1900 800  1900 900 
 Connection ~ 1900 900 
@@ -2568,8 +2507,6 @@ Wire Wire Line
 	6250 3350 6700 3350
 Text Label 6250 3550 0    50   ~ 0
 SWDIO
-Text Label 11950 2100 2    50   ~ 0
-CORTEX_PIN2
 Text Label 7600 3800 2    50   ~ 0
 CORTEX_PIN2
 Wire Wire Line
@@ -2582,10 +2519,6 @@ Wire Wire Line
 	6250 3700 6700 3700
 Wire Wire Line
 	6250 3900 6700 3900
-Text Label 11950 2300 2    50   ~ 0
-TDO
-Text Label 11950 2400 2    50   ~ 0
-TDI
 Text Notes 10550 3150 0    50   ~ 0
 CORTEX_PIN2 is either SWDIO or TMS,\nsee mode switch. This supports\nusing the 10-pin header for SWD\nor 10-pin JTAG.
 Wire Wire Line
@@ -2635,16 +2568,6 @@ F 3 "" H 9050 4250 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	11450 2100 11950 2100
-Wire Wire Line
-	11450 2200 11950 2200
-Wire Wire Line
-	11450 2300 11950 2300
-Wire Wire Line
-	11450 2400 11950 2400
-Wire Wire Line
-	11450 2500 11950 2500
-Wire Wire Line
 	9050 4150 9050 4250
 $Comp
 L Device:Jumper_NO_Small JP2
@@ -2681,38 +2604,6 @@ Wire Wire Line
 Connection ~ 5850 3750
 Wire Wire Line
 	5850 3750 5900 3750
-Text Label 9300 3050 0    50   ~ 0
-xPB0
-Text Label 9300 3150 0    50   ~ 0
-xPB2
-Text Label 9300 3250 0    50   ~ 0
-xPB4
-Text Label 9300 3350 0    50   ~ 0
-xPB6
-Text Label 10300 3050 2    50   ~ 0
-xPB1
-Text Label 10300 3150 2    50   ~ 0
-xPB3
-Text Label 10300 3250 2    50   ~ 0
-xPB5
-Text Label 10300 3350 2    50   ~ 0
-xPB7
-Wire Wire Line
-	10300 3350 10050 3350
-Wire Wire Line
-	10300 3250 10050 3250
-Wire Wire Line
-	10050 3150 10300 3150
-Wire Wire Line
-	10300 3050 10050 3050
-Wire Wire Line
-	9550 3050 9300 3050
-Wire Wire Line
-	9300 3150 9550 3150
-Wire Wire Line
-	9550 3250 9300 3250
-Wire Wire Line
-	9300 3350 9550 3350
 $Comp
 L Device:R_Pack04 RN8
 U 1 1 5EDCD172
@@ -2939,21 +2830,6 @@ Wire Wire Line
 	10400 2050 10400 2100
 Connection ~ 10400 2100
 $Comp
-L tigard:VTARGET #PWR0150
-U 1 1 5FDD0733
-P 10800 2050
-F 0 "#PWR0150" H 10800 1900 50  0001 C CNN
-F 1 "VTARGET" H 10815 2223 50  0000 C CNN
-F 2 "" H 10800 2050 50  0001 C CNN
-F 3 "" H 10800 2050 50  0001 C CNN
-	1    10800 2050
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	10800 2050 10800 2100
-Wire Wire Line
-	10800 2100 10950 2100
-$Comp
 L tigard:VTARGET #PWR0151
 U 1 1 5FE6D1C3
 P 3300 2700
@@ -3098,30 +2974,6 @@ $EndComp
 Wire Wire Line
 	3250 2700 3300 2700
 Connection ~ 3300 2700
-$Comp
-L power:GND #PWR04
-U 1 1 5F303A88
-P 10150 3800
-F 0 "#PWR04" H 10150 3550 50  0001 C CNN
-F 1 "GND" H 10155 3627 50  0000 C CNN
-F 2 "" H 10150 3800 50  0001 C CNN
-F 3 "" H 10150 3800 50  0001 C CNN
-	1    10150 3800
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	10050 3450 10150 3450
-Wire Wire Line
-	10150 3450 10150 3750
-Wire Wire Line
-	9550 3450 9450 3450
-Wire Wire Line
-	9450 3450 9450 3750
-Wire Wire Line
-	9450 3750 10150 3750
-Connection ~ 10150 3750
-Wire Wire Line
-	10150 3750 10150 3800
 Text Label 4150 6950 2    50   ~ 0
 BD6
 Text Label 4150 7050 2    50   ~ 0
@@ -3431,4 +3283,224 @@ F 3 "" H 2600 4100 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	2600 4100 2600 4150
+$Comp
+L Connector_Generic:Conn_02x05_Odd_Even J8
+U 1 1 606E7698
+P 13200 2300
+F 0 "J8" H 13250 2717 50  0000 C CNN
+F 1 "CORTEX" H 13250 2626 50  0000 C CNN
+F 2 "mybays_connector:debugger_2x05_P1.27mm_Vertical" H 13200 2300 50  0001 C CNN
+F 3 "~" H 13200 2300 50  0001 C CNN
+F 4 "FTSH-105-01-F-DV-K" H 13200 2300 50  0001 C CNN "P/N"
+F 5 "C448647" H 13200 2300 50  0001 C CNN "LCSC"
+F 6 "conn-th-01in-5-2-hdr" H 13200 2300 50  0001 C CNN "Key"
+	1    13200 2300
+	1    0    0    -1  
+$EndComp
+NoConn ~ 13000 2400
+Text Label 14000 2500 2    50   ~ 0
+~SRST
+$Comp
+L power:GND #PWR0163
+U 1 1 606E76A0
+P 12850 2550
+F 0 "#PWR0163" H 12850 2300 50  0001 C CNN
+F 1 "GND" H 12855 2377 50  0000 C CNN
+F 2 "" H 12850 2550 50  0001 C CNN
+F 3 "" H 12850 2550 50  0001 C CNN
+	1    12850 2550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	12850 2200 13000 2200
+Wire Wire Line
+	13000 2300 12850 2300
+Connection ~ 12850 2300
+Wire Wire Line
+	12850 2300 12850 2200
+Wire Wire Line
+	12850 2300 12850 2500
+Wire Wire Line
+	12850 2500 13000 2500
+Connection ~ 12850 2500
+Wire Wire Line
+	12850 2500 12850 2550
+Text Label 14000 2200 2    50   ~ 0
+TCK
+Text Label 14000 2100 2    50   ~ 0
+CORTEX_PIN2
+Text Label 14000 2300 2    50   ~ 0
+TDO
+Text Label 14000 2400 2    50   ~ 0
+TDI
+Wire Wire Line
+	13500 2100 14000 2100
+Wire Wire Line
+	13500 2200 14000 2200
+Wire Wire Line
+	13500 2300 14000 2300
+Wire Wire Line
+	13500 2400 14000 2400
+Wire Wire Line
+	13500 2500 14000 2500
+$Comp
+L tigard:VTARGET #PWR0164
+U 1 1 606E76B7
+P 12850 2050
+F 0 "#PWR0164" H 12850 1900 50  0001 C CNN
+F 1 "VTARGET" H 12865 2223 50  0000 C CNN
+F 2 "" H 12850 2050 50  0001 C CNN
+F 3 "" H 12850 2050 50  0001 C CNN
+	1    12850 2050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	12850 2050 12850 2100
+Wire Wire Line
+	12850 2100 13000 2100
+$Comp
+L Connector_Generic:Conn_02x07_Odd_Even J9
+U 1 1 607DD367
+P 13350 3600
+F 0 "J9" H 13400 4117 50  0000 C CNN
+F 1 "LA" H 13400 4026 50  0000 C CNN
+F 2 "Connector_PinHeader_1.27mm:PinHeader_2x07_P1.27mm_Vertical" H 13350 3600 50  0001 C CNN
+F 3 "~" H 13350 3600 50  0001 C CNN
+F 4 "FTSH-107-01-F-DV-K" H 13350 3600 50  0001 C CNN "P/N"
+F 5 "" H 13350 3600 50  0001 C CNN "LCSC"
+	1    13350 3600
+	1    0    0    -1  
+$EndComp
+NoConn ~ 13150 3800
+NoConn ~ 13150 3900
+NoConn ~ 13650 3900
+NoConn ~ 13650 3800
+Text Label 12900 3300 0    50   ~ 0
+xPB0
+Text Label 12900 3400 0    50   ~ 0
+xPB2
+Text Label 12900 3500 0    50   ~ 0
+xPB4
+Text Label 12900 3600 0    50   ~ 0
+xPB6
+Text Label 13900 3300 2    50   ~ 0
+xPB1
+Text Label 13900 3400 2    50   ~ 0
+xPB3
+Text Label 13900 3500 2    50   ~ 0
+xPB5
+Text Label 13900 3600 2    50   ~ 0
+xPB7
+Wire Wire Line
+	13900 3600 13650 3600
+Wire Wire Line
+	13900 3500 13650 3500
+Wire Wire Line
+	13650 3400 13900 3400
+Wire Wire Line
+	13900 3300 13650 3300
+Wire Wire Line
+	13150 3300 12900 3300
+Wire Wire Line
+	12900 3400 13150 3400
+Wire Wire Line
+	13150 3500 12900 3500
+Wire Wire Line
+	12900 3600 13150 3600
+$Comp
+L power:GND #PWR0165
+U 1 1 607DD381
+P 13750 4050
+F 0 "#PWR0165" H 13750 3800 50  0001 C CNN
+F 1 "GND" H 13755 3877 50  0000 C CNN
+F 2 "" H 13750 4050 50  0001 C CNN
+F 3 "" H 13750 4050 50  0001 C CNN
+	1    13750 4050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	13650 3700 13750 3700
+Wire Wire Line
+	13750 3700 13750 4000
+Wire Wire Line
+	13150 3700 13050 3700
+Wire Wire Line
+	13050 3700 13050 4000
+Wire Wire Line
+	13050 4000 13750 4000
+Connection ~ 13750 4000
+Wire Wire Line
+	13750 4000 13750 4050
+$Comp
+L mybays_connector:CORTEX-DEBUGGER_HOST CON1
+U 1 1 6093BEBD
+P 14500 1300
+F 0 "CON1" H 14500 1767 50  0000 C CNN
+F 1 "CORTEX-DEBUGGER_HOST" H 14500 1676 50  0000 C CNN
+F 2 "mybays_connector:debugger_2x05_P1.27mm_Vertical" H 14500 1300 50  0001 C CNN
+F 3 "" H 14500 1300 50  0001 C CNN
+	1    14500 1300
+	1    0    0    -1  
+$EndComp
+$Comp
+L tigard:VTARGET #PWR0120
+U 1 1 6093D399
+P 13550 1050
+F 0 "#PWR0120" H 13550 900 50  0001 C CNN
+F 1 "VTARGET" H 13565 1223 50  0000 C CNN
+F 2 "" H 13550 1050 50  0001 C CNN
+F 3 "" H 13550 1050 50  0001 C CNN
+	1    13550 1050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	13900 1200 13550 1200
+Wire Wire Line
+	13550 1200 13550 1050
+Wire Wire Line
+	13550 1300 13900 1300
+Wire Wire Line
+	13550 1400 13900 1400
+$Comp
+L power:GND #PWR0150
+U 1 1 60A8A8E3
+P 13850 1550
+F 0 "#PWR0150" H 13850 1300 50  0001 C CNN
+F 1 "GND" H 13855 1377 50  0000 C CNN
+F 2 "" H 13850 1550 50  0001 C CNN
+F 3 "" H 13850 1550 50  0001 C CNN
+	1    13850 1550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	13850 1550 13850 1500
+Wire Wire Line
+	13850 1500 13900 1500
+Text Label 15400 1100 2    50   ~ 0
+~SRST
+Text Label 15100 1400 0    50   ~ 0
+UART_TX
+Wire Wire Line
+	15500 1300 15100 1300
+$Comp
+L power:GND #PWR0166
+U 1 1 60C2151B
+P 15500 1300
+F 0 "#PWR0166" H 15500 1050 50  0001 C CNN
+F 1 "GND" H 15505 1127 50  0000 C CNN
+F 2 "" H 15500 1300 50  0001 C CNN
+F 3 "" H 15500 1300 50  0001 C CNN
+	1    15500 1300
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	15100 1400 15450 1400
+Wire Wire Line
+	15100 1500 15450 1500
+Wire Wire Line
+	15100 1200 15450 1200
+Wire Wire Line
+	15100 1100 15450 1100
+Text Label 15100 1500 0    50   ~ 0
+UART_RX
 $EndSCHEMATC
